@@ -1,0 +1,104 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family:  Verdana, sans-serif;
+}
+header{
+display: flex;
+background-color: #343434;
+}
+
+.logo{
+line-height: 40px;
+font-size: 25px;
+padding-left: 20px;
+padding-right: 40px;
+color: #fff;
+font-weight: 800;
+}
+.menu{
+display: flex;
+
+}
+.menu li {
+    line-height: 50px;
+list-style: none;
+padding-left:20px ;
+padding-right: 20px;
+transition:  all 100ms ease-out;
+
+
+}
+
+
+
+.menu li a{
+    text-decoration: none;
+    color: #fff;
+    opacity: 0.7;
+    
+
+}
+.burg{
+display: none;
+}
+
+.menu li:hover{
+    background-color: #000;
+    opacity: 1;
+ 
+}
+.menu li:hover a{
+ 
+    opacity: 1;
+}
+
+.menu li.active{
+    background-color: #000;
+    opacity: 1;
+} 
+.menu li.active a{
+  
+    opacity: 1;
+} 
+
+
+@media screen and (max-width: 790px) {
+
+    .menu {
+        display: flex;
+        position: absolute;
+        flex-direction: column;
+        top: 50px;
+        transition: all 0.3s ease-in-out;
+        background-color: #555;
+        left: -100%;
+        height: 500px;
+        width: 100%;
+    
+     
+    }
+    .burg{
+        line-height: 50px;
+        font-size: 33px;
+        padding-right: 30px;
+        color:#fff;
+        opacity: 0.8;
+        transition: all 50ms ease-out;
+        cursor: pointer;
+
+        display: block;
+    }
+    .burg:hover{
+        opacity: 1;
+    }
+    header{
+        justify-content: space-between;
+        text-align: center;
+    }
+    .menu.active{
+      
+       left:0;
+    }
+}
